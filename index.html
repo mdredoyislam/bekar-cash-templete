@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>beKarCash</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!--header aria starts-->
+
+	<header id="header">
+		<div class="container">
+			<div class="main">
+				<div class="logo">
+					<ul>
+						<li><a href="#" target="blank">Login</a>
+							<div class="sub-menu">
+								<div class="email">
+									<label>E-mail/Phone :</label></br>
+									<label><input type="text" name="email/phone" placeholder="email/phone"></label></br>
+								</div>
+								<div class="pass">
+									<label>Password</label></br>
+									<label><input type="password" name="password"></label></br>
+								</div>
+								<div class="btn">
+									<a href=""><input type="button" value="Login"></a>
+								</div>
+							</div>
+						</li>
+						<li><a href="#" target="blank">Create account</a>
+							<div class="singup">
+								<form action="./registration.php"  method="post">
+								<div class="form-group">
+									<label for="first_name">First name</label>
+									<input type="text" class="form-control" id="first_name" name='fname' >
+									<span style='color:red'><?php echo $frst_name_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="first_name">Middle name</label>
+									<input type="text" class="form-control" id="middle_name"   name="middle_name">
+									<span style='color:red'><?php echo $middle_name_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="last_name">last name</label>
+									<input type="text" class="form-control" id="last_name"   name="last_name">
+									<span style='color:red'><?php echo $last_name_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="mobile_number">Mobile Number</label>
+									<input type="text" class="form-control" id="mobile_number"  name="mobile_number">
+									<span style='color:red'><?php echo $mobile_number_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="email">Email address:</label>
+									<input type="text" class="form-control" id="email"  name='email'>
+									<span style='color:red'><?php echo $email_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="pwd">Password:</label>
+									<input type="password" class="form-control" id="pwd"  name="password">
+									<span style='color:red'><?php echo $password_err; ?></span>
+								  </div>
+								  <div class="form-group">
+									<label for="confirm_password">Confirm Password:</label>
+									<input type="password" class="form-control" id="pwd"  name='confirm_password'>
+									<span style='color:red'><?php echo $confir_pasword_err; ?></span>
+								  </div>
+								  
+								  <button type="submit" class="btn btn-default" name='save'>submit</button>
+								</form>
+								
+								</div>
+						</li>
+					</ul>
+				</div>
+				<nav class="nav">
+					<ul>
+						<li><a href="#"><img src="logo/operator.png">
+<p class="rat">Operator:</p>
+							<p class="online">online</p></a></li>
+							
+							<p class="work">
+						<img src="logo/clock.png"><span>Work time: 8.00 am - 11.00 pm, GMT +6</span></p>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+		<div class="container">
+        <center class="main2">
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" id="MARQUEE1" style="text-align: left;" class="scrolling"><span style="color: #EF1212; "><strong>নোটিশ : </strong></span> দেশের ক্ষুদ্র ফ্রিলান্সার ও বেকার বন্ধুদের সফল অনলাইন ক্যারিয়ার গড়ার অদম্য প্রচেষ্টাকে আরও সহজ ও সুদৃঢ় করার লক্ষে <span style="color: #085AB2; text-transform: Capitalize;"> beKarCash </span> এর যাত্রা শুরু। 50 ডলারের কম Skrill ও Neteller ডলার Buy Order করলে 0.60 USD ট্রানজেকশন ফি আপনাকে দিতে হবে।  <span style="color: #242625; "> টাকা পাঠানোর পর TrxID হিসেবে যে মোবাইল থেকে টাকা Cashout বা Send করেছেন সেই মোবাইল নাম্বার দিবেন। </span> আমাদের bKash ও Roket Agent নাম্বার সকাল ৮.০০ টা থেকে রাত ১০.০০ টা পর্যন্ত চালু থাকবে। তবে যে কোন সময় Personal bKash ও Roket নাম্বারে টাকা পাঠাতে পারবেন। সাধারণত ১০ মিনিটের মধ্যেই সকল লেনদেন সম্পন্ন করা হয়। বিশেষ ক্ষেত্রে সর্বোচ্চ ২৪ ঘন্টা সময় লাগতে পারে। আমরা শুধুমাত্র বাংলাদেশী ক্ষুদ্র ফ্রি-লান্সারদের অনলাইন থেকে উপার্জিত অর্থ লেনদেনে সহায়তা করি। আসুন “অনলাইনে আয় করি, মনের মত দেশ গড়ি।</marquee>
+            </span>
+        </center>
+    </div>
+    <!--header aria ends-->
+<!-- header top aria starts-->
+
+    <div class="header_top">
+    	<div class="container">
+    		<div class="menu">
+    			<div class="logo">
+    				<img src="logo/bekarcashlogo.png">
+    			</div>
+    			<nav class="nav">
+    				<ul>
+    					<li><a href="index.html"> Buy-Sell</a></li>
+    					<li><a href="buy-sall.html"> Rates</a></li>
+    					<li><a href="comment.html">Comments</a></li>
+    					<li><a href="faq.html">FAQ</a></li>
+    					<li><a href="Contact.html">Contact</a></li>
+    				</ul>
+    			</nav>
+    		</div>
+    	</div>
+    </div>
+<!-- header top aria ends-->
+<!-- content aria starts-->
+<div class="content">
+		<div class="content_2">
+			<div class="border_2"></div>
+			<div class="container">
+			<div class="left">
+				<div class="paragraph">
+<center><h4><a href="#"><strong><br><br>
+	<img src="logo/garr2.png" width="150" height="40">
+</strong></a></h4></center>
+<center><h4><a href="#"><strong>
+	<strong>"দেশের নতুন ও ক্ষুদ্র ফ্রিলান্সারদের আস্থা"
+</strong>
+</strong></a></h4></center><br>
+<center><h4><a href="#"><strong>
+	<img src="logo/buy.png" width="20" height="20"><strong>
+		 <span style="color: #909090;">50 এর কম Skrill ও Neteller ক্রয় করলে<span style="color: red"> Fee 0.60 USD </span>দিতে হবে</span>
+
+	</strong>
+</strong></a></h4></center><br>
+<center><h4><a href="#"><strong>
+	<img src="logo/mic3.png" width="20" height="20"><strong>
+		 <span style="color: #909090;">TrxID হিসেবে মোবাইল নাম্বার দিবেন</span>
+	</strong>
+</strong></a></h4></center><br>
+<center><h4><a href="#"><strong>
+	<img src="logo/hasi.png" width="20" height="20"><strong>
+		 <span style="color: green;"> লেনদেন চলছে......
+</span>
+	</strong>
+</strong></a></h4></center>
+
+			</div>	
+			<div class="class">
+				<div class="class1">
+					<div class="class_1">
+					</div>
+					<div class="class_11">
+					<img src="logo/1531887270_icon (1).jpg">
+
+						</div>
+				</div>
+				<div class="class2">
+					<div class="class_2">
+						<p><img src="logo/arrow-down.png"> Send</p>
+
+					</div>
+					<div class="class_22">
+						<select>
+                            <option>Skrill. USD</option>
+                            <option>Perfect Money.USD</option>
+                            <option>bKash Agent BDT</option>
+                            <option>Roket Agent BDT</option>
+                            <option>WebMoney.USD</option>
+						</select>
+
+						<select class="select">
+							<option>99</option>
+							</select>
+						</div>
+					<p class="p_2">Exchange rate: 99 BDT = 1 USD</p>
+
+				</div>
+				<div class="class3">
+					<div class="class_3">
+						<p><img src="logo/arrow-up.png"> Receive</p>
+					</div>
+					<div class="class_33">
+							<select>
+                            <option>NETELLER. USD</option>
+                            <option>PAYEER. USD</option>
+                            <option>Roket Personal BDT</option>
+                            <option>Roket Personal BDT</option>
+                            <option>AdvCash. USD</option>
+						</select>
+						<div class="select">
+					     </div>
+						</div>
+						<p class="p_1">Reserve: 00 USD</p>
+				</div>
+				<div class="class4">
+					<div class="class_4">
+						
+					</div>
+					<div class="class_44">
+							<img src="logo/1531848232_icon.jpg">
+						</div>
+				</div>
+				<div class="class_last">
+					<p>Excheang</p>
+				</div>
+				<div class="border1">
+				<img src="logo/pendingo.gif">
+				<p class="Pending"> Pending Orders</p>
+				 <p class="Send">Send&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Receive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Status</p>
+				 <div class="send2"></div>
+					 <p class="Still">Still no have exchanges.</p>
+			</div>
+
+<div class="last_right">
+	<div class="last_right1">
+		<img src="logo/completeex.gif">
+		<p> Completed Orders</p>
+	</div><br><br>
+			
+<div class="complet">
+	<table class="complet_2">
+		<thead>
+			<tr>
+				<td>Send</td>
+				<td>Amount</td>
+				<td>Receive</td>
+				<td>Amount</td>
+				<td>Status</td>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong>Perfect Money. USD	</strong></td>
+				<td><strong>33 USD</strong></td>
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>2772.00 BDT</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+		<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>555 BDT</strong></td>
+<td><img src="logo/1531849332_icon.png" width="20" height="20"><strong>NETELLER. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>5.61 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>555 BDT</strong></td>
+<td><img src="logo/1531849332_icon.png" width="20" height="20"><strong>NETELLER. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>5.61 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>1500 BDT</strong></td>
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong> Perfect Money. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>16.30 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			
+			<tr>
+
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>80 USD</strong></td>
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>6720.00 BDT</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>555 BDT</strong></td>
+<td><img src="logo/1531849332_icon.png" width="20" height="20"><strong> NETELLER. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>5.61 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>1000 BDT</strong></td>
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong>Perfect Money. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>10.87 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>4600 BDT</strong></td>
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong>Perfect Money. USD</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>50.00 USD</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531850216_icon.jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>120 USD	</strong></td>
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>10080.00 BDT</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			<tr>
+
+<td><img src="logo/1531849332_icon.png" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+				<td><strong>12 USD</strong></td>
+<td><img src="logo/1531887270_icon (1).jpg" width="20" height="20"><strong>bKash Personal BDT</strong></td>
+<td><img src="logo/latestex (1).gif" width="20" height="20"><strong>1080.00 BDT</strong></td>
+<td><img src="logo/Tick_Mark_Dark-512.png" width="20" height="20" margin-top="-30"><span  style="background: #41AD49; color: white;">PROCESSED</span></td>
+
+
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+			</div>
+			</div>
+			
+			<div class="right">
+				<div class="right_m">
+				<div class="right_1">
+	<img src="logo/reserve.png" ><p>OUR RESERVE NOW</p>
+		 
+		
+				</div>
+				<div class="logo1">
+				<div class="logo_1">
+					<div class="right3">
+						<img src="logo/1531848232_icon.jpg">
+						<img src="logo/1531850216_icon.jpg">
+						<img src="logo/1531885691_icon.png">
+						<img src="logo/1531887378_icon.jpg">
+						<img src="logo/1535253830_icon.jpg">
+					</div>
+					<div class="right4">
+						
+						<label>Skrill.</label><br><span>00 </span>
+						<span class="p_tag">USD</span>
+						<label>Perfect Money.</label><br><span>16.50 </span>
+						<span class="p_tag">USD</span>
+					<label>bKash Agent</label><br><span>00 </span>
+						<span class="p_tag">BDT</span>
+						<label>Roket Agent</label><br><span>00 </span>
+						<span class="p_tag">BDT</span>
+						<label>WebMoney.</label><br><span>00 </span>
+						<span class="p_tag">USD</span>
+					</div>
+					
+				</div>
+				<div class="logo_2">
+					<div class="fast_s">
+				<img src="logo/1531849332_icon.png">
+				<img src="logo/1531852045_icon.png">
+				<img src="logo/1531887270_icon (1).jpg">
+				<img src="logo/1531888478_icon.png">
+				<img src="logo/1535544949_icon.png">
+
+					</div>
+					<div class="fast_p">
+						<label>NETELLER.</label><br><span>1.59 </span>
+						<span class="p_ta">USD</span>
+						<label>PAYEER.</label><br><span>0.79 </span>
+						<span class="p_ta">USD</span>
+					<label>bKash Personal</label><br><span>18987.94 </span>
+						<span class="p_ta">BDT</span>
+						<label>Roket Personal</label><br><span>00 </span>
+						<span class="p_ta">BDT</span>
+						<label>AdvCash.</label><br><span>00 </span>
+						<span class="p_ta">USD</span>
+					</div>
+					</div>
+				</div>
+				
+				</div>
+				<div class="left3">
+					
+					<div class="left2">
+						<img src="logo/contact.png">
+					</div>
+					<div class="left1">
+						<div class="left9">
+			<img src="logo/gmail.png" alt="">
+			<p class="gmail"> Support email</p>
+		<p class="gmail2">support@bekarcash.com
+</p>
+						</div>
+					</div>
+			</div>
+
+			<div class="last_left">
+				<div class="last_left2">
+					<img src="logo/notice.png">
+					<div class="last_left3">
+						<p>এডমিন অফলাইনে থাকলেও নিশ্চিন্তে ক্রয়-বিক্রয় অর্ডার করতে পারেন। অর্ডার করলে অনলাইনে আসা মাত্র আপনার পেমেন্ট পেয়ে যাবেন।<br>
+- ধন্যবাদ</p>
+					</div>
+					<div class="last_left4">
+						<div class="last_d">
+		<p class="gift"><img src="logo/mycomment (1).gif"> আমাদের সার্ভিস সম্পর্কে আপনার মন্তব্য জানান। আপনার মতামত আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ। মন্তব্য জানাতে আগে<br> লগইন করুন এরপর<br>
+<a href="#">এখানে ক্লিক করুন</a><br>
+						</p>
+						<p class="ad">Advertisement</p>
+						<span class="last"><img src="logo/mycomment.gif"></span>
+					</div>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- content aria starts-->
+<div class="free">
+	<div class="container">
+		<div class="free2">
+			<div class="free3">
+				<img src="logo/mmoney.png">
+				<p>  Make Money For Free! </p>
+				<label>Trusted PTC Sites</label>
+			</div>
+			<div class="main5">
+<div class="main6">
+			<img src="logo/EasyHits4U.png" width="80" height="80">
+				<p> EASYHITS4U</p><br><br><br>
+				 <span style="background: #007AB3; padding: 7px 29px; color: #fff;">
+				 SolidTrustPay, VISA</span><br><br>
+				<span style="background: #333333; padding: 13px 68px; color: #fff;"> PAYING</span>
+				
+
+				</div>
+
+
+<div class="main6">
+			
+			<img src="logo/ojooo.png" width="80" height="80">
+				<p>  OJOOO</p><br><br><br>
+				 <span style="background: #007AB3; padding: 7px 29px; color: #fff;">
+				 SolidTrustPay, VISA</span><br><br>
+				<span style="background: #333333; padding: 13px 68px; color: #fff;"> PAYING</span>		
+				</div>
+<div class="main6">
+					<img src="logo/neobux.png" width="80" height="80">
+				<p>NEOBUX</p><br><br><br>
+				 <span style="background: #007AB3; padding: 7px 29px; color: #fff;">
+				 SolidTrustPay, VISA</span><br><br>
+				<span style="background: #333333; padding: 13px 68px; color: #fff;"> PAYING</span>
+				</div>
+<div class="main6">
+					<img src="logo/ygp.png" width="80" height="80">
+				<p>YOUGETPROFIT</p><br><br><br>
+				 <span style="background: #007AB3; padding: 7px 29px; color: #fff;">
+				 SolidTrustPay, VISA</span><br><br>
+				<span style="background: #333333; padding: 13px 68px; color: #fff;"> PAYING</span>
+				</div>
+<div class="main6">
+					<img src="logo/paidverts.png" width="80" height="80">
+				<p>PAIDVERTS</p><br><br><br>
+				 <span style="background: #007AB3; padding: 7px 29px; color: #fff;">
+				 SolidTrustPay, VISA</span><br><br>
+				<span style="background: #333333; padding: 13px 68px; color: #fff;"> PAYING</span>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!--footer aria starts-->
+        <footer class="footer">
+        	<div class="container">
+
+        			<div class="footer_1">
+        				<a href="#"><img src="logo/bclogofooter.png"></a>
+        				<p>Work time: 8.00 am - 11.00 pm, GMT +6</p>
+        				<p>support@bekarcash.com</p>
+        			</div>
+        			<div class="footer_2">
+        				<p><span>TERMS & SUPPORT</span></p>
+        				<div class="footer_v"></div>
+        				<p>Dollar Rate</p>
+        				<p>Payment Proof</p>
+        				<p>Affiliate</p>
+        			</div>
+        			<div class="footer_3">
+        			<p><span>TERMS & SUPPORT</span></p>
+        			<p>About</p>
+        			<p>Contact</p>
+        			<p>Videos</p>
+
+        			</div>
+        			<div class="footer_4">
+        			<p><span>TERMS & SUPPORT</span></p>
+        			<p>Frequently asked questions</p>
+        			<p>Terms Of Service</p>
+        			<p>Privacy & Policy</p>
+        			</div>
+        		</div>
+        	</div>
+        </footer>
+        <!--footer aria ends-->
+
+</body>
+</html>
+
+ 			
